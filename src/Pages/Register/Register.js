@@ -3,15 +3,24 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 
-const LogIn = () => {
+const Register = () => {
     return (
         <div className='w-50 m-auto mt-5'>
             <Form>
-                <h2>Log In</h2>
+                <h2>Register</h2>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Your Full Name" /> 
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Photo URL</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Your Photo URL" /> 
+                </Form.Group>
+
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                   
+                    <Form.Control type="email" placeholder="Enter email" /> 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -22,16 +31,10 @@ const LogIn = () => {
                 <Button variant="primary" type="submit">
                     Log In
                 </Button>
-                
+                <p className='mt-3'>Already have an account?Please <Link to='/login'>Log In</Link> </p>
             </Form>
-            <div className='mt-4'>
-                <h6 className='mb-2'>Or Sign Up Using</h6>
-                <Button variant="outline-primary" className='me-3'>Google</Button>
-                <Button variant="outline-primary">Github</Button>
-            </div>
-            <p className='mt-3'>First time this website? Please <Link to='/register'>Register</Link> </p>
         </div>
     );
 };
 
-export default LogIn;
+export default Register;
