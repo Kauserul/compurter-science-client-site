@@ -1,0 +1,17 @@
+.home{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../../img/photo-1448932223592-d1fc686e76ea.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.btn-course{
+    text-decoration: none;
+}
+
+.home-title{
+    padding: 190px 0;
+    
+}
+
