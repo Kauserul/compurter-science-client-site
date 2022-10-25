@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
-const CourseDetails = () => {
+const CourseDetails = ({course}) => {
     const courseDetails = useLoaderData();
     const { img, title, details, id } = courseDetails;
     return (

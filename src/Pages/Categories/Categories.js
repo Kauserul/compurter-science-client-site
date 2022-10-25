@@ -15,7 +15,7 @@ const Categories = () => {
             <div>
                 <h2 className='mb-4'>Categories</h2>
                 {
-                    categories.map(ct => <li key={ct.id} className='category'><Link className='link-btn text-dark' to={`/classes/${ct.id}`}>{ct.name}</Link></li>)
+                    categories.map(ct => <li key={ct.id} className='category'><Link className='link-btn text-dark' to={`/categoryCourse/${ct.id}`}>{ct.name}</Link></li>)
                 }
             </div>
         </div>

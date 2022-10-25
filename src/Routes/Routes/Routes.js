@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Categories from "../../Pages/Categories/Categories";
+import CategoryCourse from "../../Pages/CategoryCourse/CategoryCourse";
 import Classes from "../../Pages/Classes/Classes";
 import Course from "../../Pages/Course/Course";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
@@ -45,6 +46,11 @@ export const router = createBrowserRouter([
                 path : '/premium/:id',
                 element : <PremiumAccess></PremiumAccess>,
                 loader : ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+            },
+            {
+                path : '/categoryCourse/:id',
+                element : <CategoryCourse></CategoryCourse>,
+                loader : ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
             }
         ]
     }
