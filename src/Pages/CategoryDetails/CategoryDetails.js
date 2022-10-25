@@ -6,7 +6,7 @@ const CategoryDetails = ({course}) => {
     const { img, title, details, id } = course;
     return (
         <Container>
-            <div className='d-flex justify-content-between mb-3 mt-3'>
+            <div className='d-flex justify-content-between mb-0 mt-3'>
                 <div>
                 </div>
                 <Button variant="primary" className=''>Download pdf</Button>

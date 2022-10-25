@@ -6,12 +6,12 @@ const PremiumDetails = ({ premiumCourse }) => {
     const { title, author, photoURL, details, ratting } = premiumCourse
     return (
         <div>
-            <h2 className='fs-1 mb-4'>{title}</h2>
+            <h2 className='fs-1 mb-3'>{title}</h2>
             <div>
-                <h2 className='mb-3'>Course Overview</h2>
+                <h2 className='mb-2'>Course Overview</h2>
                 {details}
             </div>
-            <div className='d-flex align-items-center justify-content-between mt-4'>
+            <div className='d-flex align-items-center justify-content-between mt-3 mb-0'>
                 <div className="d-flex align-items-center">
                     <FaUser className='me-3 fs-3'></FaUser>
                     <div>

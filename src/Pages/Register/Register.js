@@ -21,11 +21,10 @@ const Register = () => {
 
         userRegister(email, password)
             .then(result => {
-                
                 const user = result.user;
                 handleUpdateUserProfile(name, photoURL)
                 navigate('/')
-                console.log(user)
+                form.reset()
             })
             .catch(error => {
                 setError(error.message)
@@ -60,12 +59,12 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" />
+                    <Form.Control type="email" name='email' placeholder="Enter email" required/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Password" />
+                    <Form.Control type="password" name='password' placeholder="Password" required/>
                 </Form.Group>
 
                 <Form.Text className='d-block text-danger'>

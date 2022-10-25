@@ -30,8 +30,8 @@ const Header = () => {
                     <Nav className="me-auto d-flex align-items-center">
                         <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn'>Course</Link> </Nav.Link>
                         <Nav.Link className='me-4 text-dark'>FAQ</Nav.Link>
-                        <Nav.Link className='me-5 text-dark'>Blog</Nav.Link>
-                        <Nav.Link className='me-5 text-dark'>Dark or Light</Nav.Link>
+                        <Nav.Link className='me-4 text-dark'>Blog</Nav.Link>
+                        <Nav.Link className='me-4 text-dark'>Dark or Light</Nav.Link>
 
                         {
                             user?.uid ?
@@ -45,9 +45,9 @@ const Header = () => {
                         <div className='ms-4'>
                             {
                                 user?.photoURL ?
-                                    <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
+                                    <Image title={user?.displayName} style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
                                     :
-                                    <FaUser></FaUser>
+                                    <></>
                             }
                         </div>
 
