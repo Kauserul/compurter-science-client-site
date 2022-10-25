@@ -4,6 +4,7 @@ import CourseSummary from '../CourseSummary/CourseSummary';
 import { Col, Container, Row } from 'react-bootstrap';
 import Categories from '../Categories/Categories';
 import CourseDetails from '../CourseDetails/CourseDetails';
+import CategoryDetails from '../CategoryDetails/CategoryDetails';
 
 const CategoryCourse = () => {
     const singleCourse = useLoaderData();
@@ -12,16 +13,14 @@ const CategoryCourse = () => {
         <div className='container'>
             <Container>
                 <Row>
-                    <Col lg='2'  className='mt-5'>
-                        <Categories></Categories>
-                    </Col>
-                    <Col lg='10'>
-                        <div className='course mb-5'>
+                    
+                    <Col>
+                        <div className='mb-5'>
                             {
-                                singleCourse.map(course => <CourseSummary
+                                singleCourse.map(course => <CategoryDetails
                                     key={course.id}
                                     course={course}
-                                ></CourseSummary>)
+                                ></CategoryDetails>)
                             }
                         </div>
                     </Col>

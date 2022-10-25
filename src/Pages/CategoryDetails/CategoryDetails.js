@@ -1,12 +1,9 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const CourseDetails = () => {
-    const courseDetails = useLoaderData();
-    const { img, title, details, id } = courseDetails;
+const CategoryDetails = ({course}) => {
+    const { img, title, details, id } = course;
     return (
         <Container>
             <div className='d-flex justify-content-between mb-3 mt-3'>
@@ -31,4 +28,4 @@ const CourseDetails = () => {
     );
 };
 
-export default CourseDetails;
+export default CategoryDetails;
