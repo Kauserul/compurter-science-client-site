@@ -5,12 +5,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import './Header.css'
+import { FaPen } from 'react-icons/fa';
 
 const Header = () => {
     return (
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" variant="light" className=''>
             <Container className='d-flex justify-content-between'>
-                <div>
+                <div className='d-flex align-items-center'>
+                    <FaPen className='me-1'></FaPen>
                     <Navbar.Brand><Link to='/' className='link-btn'>educal</Link></Navbar.Brand>
                 </div>
                 <div>

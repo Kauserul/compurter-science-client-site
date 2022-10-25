@@ -3,9 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import Categories from '../Categories/Categories';
 import CourseSummary from '../CourseSummary/CourseSummary';
-import './Course.css'
 
-const Course = () => {
+const Classes = () => {
     const allCourse = useLoaderData()
     return (
         <div className='container'>
@@ -30,4 +29,4 @@ const Course = () => {
     );
 };
 
-export default Course;
+export default Classes;
