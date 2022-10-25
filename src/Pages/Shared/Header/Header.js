@@ -5,27 +5,54 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import './Header.css'
-import { FaPen } from 'react-icons/fa';
+import { FaPen, FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../../Context/AuthProvider';
+import { Image } from 'react-bootstrap';
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
+    const { user, userLogOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        userLogOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
+
     return (
-        <Navbar bg="light" variant="light" className=''>
+        <Navbar bg="light" variant="light" className='mb-3'>
             <Container className='d-flex justify-content-between'>
                 <div className='d-flex align-items-center'>
-                    <FaPen className='me-1'></FaPen>
+                    <FaPen className='me-0 text-danger'></FaPen>
                     <Navbar.Brand><Link to='/' className='link-btn'>educal</Link></Navbar.Brand>
                 </div>
                 <div>
-                    <Nav className="me-auto">
+                    <Nav className="me-auto d-flex align-items-center">
                         <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn'>Course</Link> </Nav.Link>
                         <Nav.Link className='me-4 text-dark'>FAQ</Nav.Link>
                         <Nav.Link className='me-5 text-dark'>Blog</Nav.Link>
-                        <Link to='/login'><Button variant="outline-success">Log In</Button></Link>
-                        {user.displayName}
+                        <Nav.Link className='me-5 text-dark'>Dark or Light</Nav.Link>
+
+                        {
+                            user?.uid ?
+                                <div className='d-flex align-items-center'>
+                                    <span>{user?.displayName}</span>
+                                    <Button variant="success" className='ms-2' onClick={handleLogOut}>Log Out</Button>
+                                </div>
+                                :
+                                <Link to='/login'><Button variant="outline-success" className=''>Log In</Button></Link>
+                        }
+                        <div className='ms-4'>
+                            {
+                                user?.photoURL ?
+                                    <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
+                                    :
+                                    <FaUser></FaUser>
+                            }
+                        </div>
+
                     </Nav>
-                    
+
                 </div>
             </Container>
         </Navbar>
