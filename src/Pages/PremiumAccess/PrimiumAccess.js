@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
@@ -7,11 +7,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import PremiumDetails from '../PremiumDetails/PremiumDetails';
 import './premiumAccess.css'
 import { FaBook, FaGlobe, FaHome, FaRegClock, FaRegUser, FaUsers } from 'react-icons/fa';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const PremiumAccess = () => {
     const premiumCourse = useLoaderData();
     const { lesson, enrolled, language, duration, img, author, lectures, cost } = premiumCourse
-    console.log(premiumCourse)
+    // console.log(premiumCourse)
+    
+
     return (
         <div>
             <Container className='mt-0 pb-0 mb-0'>

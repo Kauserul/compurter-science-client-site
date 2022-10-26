@@ -8,6 +8,7 @@ import './Header.css'
 import { FaPen, FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../../Context/AuthProvider';
 import { Image } from 'react-bootstrap';
+import DarkMode from '../../../DarkMode/DarkMode';
 
 const Header = () => {
     const { user, userLogOut } = useContext(AuthContext)
@@ -20,7 +21,7 @@ const Header = () => {
 
 
     return (
-        <Navbar bg="light" variant="light" className='mb-3'>
+        <Navbar bg="light" variant="light" className='mb-3 header'>
             <Container className='d-flex justify-content-between'>
                 <div className='d-flex align-items-center'>
                     <FaPen className='me-0 text-danger'></FaPen>
@@ -52,6 +53,10 @@ const Header = () => {
                         </div>
 
                     </Nav>
+                        
+
+
+                        
 
                 </div>
             </Container>

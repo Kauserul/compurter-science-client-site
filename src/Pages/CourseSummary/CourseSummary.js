@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaArrowRight, FaBook, FaStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import './CourseSummary.css'
 
 const CourseSummary = ({ course }) => {
     const { img, title, lesson, ratting, details, cost, id } = course
     return (
-        <div>
+        <div className=''>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
