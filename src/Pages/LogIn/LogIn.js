@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const LogIn = () => {
-    const {userLogIn, googleLogIn} = useContext(AuthContext)
+    const {userLogIn, googleLogIn, githubLogIn} = useContext(AuthContext)
     const navigate = useNavigate()
     const [error, setError] = useState('')
     const location = useLocation()
@@ -37,6 +37,15 @@ const LogIn = () => {
         .catch(error=>console.error(error))
     }
 
+    const handleGithubLogIn = () =>{
+        githubLogIn()
+        .then(result =>{
+            const user = result.user
+            console.log(user)
+        })
+        .catch(error => console.error(error))
+    }
+
     return (
         <div className='w-50 m-auto mt-5'>
             <Form onSubmit={handleLogIn}>
@@ -64,7 +73,7 @@ const LogIn = () => {
             <div className='mt-4'>
                 <h6 className='mb-2'>Or Sign Up Using</h6>
                 <Button onClick={handleGoogleLogIn} variant="outline-primary" className='me-3'>Google</Button>
-                <Button variant="outline-primary">Github</Button>
+                <Button onClick={handleGithubLogIn} variant="outline-primary">Github</Button>
             </div>
             <p className='mt-3'>First time this website? Please <Link to='/register'>Register</Link> </p>
         </div>

@@ -31,28 +31,28 @@ export const router = createBrowserRouter([
             {
                 path : '/course',
                 element : <Course></Course>,
-                loader : () => fetch('http://localhost:5000/courses')
+                loader : () => fetch('https://compurter-scien-sever-site.vercel.app/courses')
             },
             {
                 path : '/classes/:id',
                 element : <Classes></Classes>,
-                loader : () => fetch('http://localhost:5000/courses')
+                loader : () => fetch('https://compurter-scien-sever-site.vercel.app/courses')
             },
             {
                 path : '/course/:id',
                 element : <CourseDetails></CourseDetails>,
-                loader : ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader : ({params}) => fetch(`https://compurter-scien-sever-site.vercel.app/courses/${params.id}`)
             },
             
             {
                 path : '/premium/:id',
                 element : <PrivateRoutes><PremiumAccess></PremiumAccess></PrivateRoutes>,
-                loader : ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader : ({params}) => fetch(`https://compurter-scien-sever-site.vercel.app/courses/${params.id}`)
             },
             {
                 path : '/categoryCourse/:id',
                 element : <CategoryCourse></CategoryCourse>,
-                loader : ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader : ({params}) => fetch(`https://compurter-scien-sever-site.vercel.app/category/${params.id}`)
             }
         ]
     }

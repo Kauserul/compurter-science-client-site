@@ -28,9 +28,9 @@ const Header = () => {
                 </div>
                 <div>
                     <Nav className="me-auto d-flex align-items-center">
-                        <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn'>Course</Link> </Nav.Link>
-                        <Nav.Link className='me-4 text-dark'>FAQ</Nav.Link>
-                        <Nav.Link className='me-4 text-dark'>Blog</Nav.Link>
+                        <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn text-dark'>Course</Link> </Nav.Link>
+                        <Nav.Link className='me-4 text-dark'><Link to='' className="link-btn text-dark">FAQ</Link></Nav.Link>
+                        <Nav.Link className='me-4 text-dark'><Link to='/blog' className='link-btn text-dark'>Blog</Link></Nav.Link>
                         <Nav.Link className='me-4 text-dark'>Dark or Light</Nav.Link>
 
                         {
