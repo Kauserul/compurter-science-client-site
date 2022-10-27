@@ -11,7 +11,7 @@ const Course = () => {
         <div className='container'>
             <Container>
                 <Row>
-                    <Col lg='2'  className='mt-5'>
+                    <Col lg='2'  className='mt-5 d-none d-lg-block'>
                         <Categories></Categories>
                     </Col>
                     <Col lg='10'>

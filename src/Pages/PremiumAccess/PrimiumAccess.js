@@ -19,7 +19,7 @@ const PremiumAccess = () => {
         <div>
             <Container className='mt-0 pb-0 mb-0'>
                 <Row>
-                    <Col lg='7' className='me-5 mb-0'>
+                    <Col lg='7' className='me-5 mb-0 d-none d-lg-block'>
                         <PremiumDetails premiumCourse={premiumCourse}></PremiumDetails>
                     </Col>
                     <Col lg='4'>

@@ -16,9 +16,9 @@ const CourseDetails = () => {
             </div>
             <Row>
                 <Col lg='6'>
-                    <Image style={{ width: '500px', height: '520px' }} src={img}></Image>
+                    <Image className='w-sm-50' style={{ width: '500px', height: '520px' }} src={img}></Image>
                 </Col>
-                <Col lg='6'>
+                <Col lg='6' className='mt-4'>
                     <h2 className='fw-bold'>{title}</h2>
                     <p><small>{details}</small></p>
                     <div className='d-flex justify-content-between'>
