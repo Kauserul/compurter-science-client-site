@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import { FaDownload } from 'react-icons/fa';
 
 const CourseDetails = () => {
     const courseDetails = useLoaderData();
@@ -12,7 +13,7 @@ const CourseDetails = () => {
             <div className='d-flex justify-content-between mb-3 mt-3'>
                 <div>
                 </div>
-                <Button variant="primary" className=''>Download pdf</Button>
+                <span className='pdf'>Download PDF <FaDownload></FaDownload></span>
             </div>
             <Row>
                 <Col lg='6'>

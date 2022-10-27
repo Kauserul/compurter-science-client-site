@@ -8,7 +8,8 @@ import './Header.css'
 import { FaPen, FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../../Context/AuthProvider';
 import { Image } from 'react-bootstrap';
-import DarkMode from '../../../DarkMode/DarkMode';
+import { DarkMode } from '../../DarkToggle/DarkToggle';
+
 
 const Header = () => {
     const { user, userLogOut } = useContext(AuthContext)
@@ -34,7 +35,7 @@ const Header = () => {
                             <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn text-dark'>Course</Link> </Nav.Link>
                             <Nav.Link className='me-4 text-dark'><Link to='' className="link-btn text-dark">FAQ</Link></Nav.Link>
                             <Nav.Link className='me-4 text-dark'><Link to='/blog' className='link-btn text-dark'>Blog</Link></Nav.Link>
-                            <Nav.Link className='me-4 text-dark'>Dark or Light</Nav.Link>
+                            <Nav.Link className='me-4 text-dark'>Dark <DarkMode style={{height:'5px'}}></DarkMode> </Nav.Link>
                             {
                                 user?.uid ?
                                     <div className='d-flex nameAndBtn align-items-center'>

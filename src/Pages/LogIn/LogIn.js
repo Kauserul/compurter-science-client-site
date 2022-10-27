@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import './LogIn.css'
 
 const LogIn = () => {
     const {userLogIn, googleLogIn, githubLogIn} = useContext(AuthContext)
@@ -48,9 +50,9 @@ const LogIn = () => {
     }
 
     return (
-        <div className='w-50 m-auto mt-5'>
+        <div className='w-25 w-lg-25 m-auto mt-5 loginPage'>
             <Form onSubmit={handleLogIn}>
-                <h2>Log In</h2>
+                <h2 className='text-center text-info mb-3'>Log In</h2>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name='email' placeholder="Enter email" />
@@ -71,8 +73,9 @@ const LogIn = () => {
                 </Button>
                 
             </Form>
-            <div className='mt-4'>
+            <div className='mt-4 text-center'>
                 <h6 className='mb-2'>Or Sign Up Using</h6>
+                
                 <Button onClick={handleGoogleLogIn} variant="outline-primary" className='me-3'>Google</Button>
                 <Button onClick={handleGithubLogIn} variant="outline-primary">Github</Button>
             </div>

@@ -39,14 +39,14 @@ const Register = () => {
         }
 
         userUpdateProfile(profile)
-            .then(() => {})
+            .then(() => { })
             .catch(error => console.error(error));
     }
 
     return (
-        <div className='w-50 m-auto mt-5'>
+        <div className='w-50 m-auto mt-5 loginPage'>
             <Form onSubmit={handleRegister}>
-                <h2>Register</h2>
+                <h2 className='text-center text-success'>Register</h2>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control type="text" name='name' placeholder="Enter Your Full Name" />
@@ -59,21 +59,23 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" required/>
+                    <Form.Control type="email" name='email' placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Password" required/>
+                    <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
 
                 <Form.Text className='d-block text-danger'>
                     {error}
                 </Form.Text>
 
-                <Button variant="primary" type="submit">
-                    Register
-                </Button>
+                <div className='text-center'>
+                    <Button className='text-center' variant="primary" type="submit">
+                        Register
+                    </Button>
+                </div>
                 <p className='mt-3'>Already have an account?Please <Link to='/login'>Log In</Link> </p>
             </Form>
         </div>
