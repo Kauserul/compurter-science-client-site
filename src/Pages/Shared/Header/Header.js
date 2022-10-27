@@ -32,14 +32,14 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-end'>
                     <div>
                         <Nav className="me-auto d-flex align-items-center">
-                            <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn text-dark'>Course</Link> </Nav.Link>
+                            <Nav.Link className='me-4 text-dark'><Link to='/course' className='link-btn text-dark'>Courses</Link> </Nav.Link>
                             <Nav.Link className='me-4 text-dark'><Link to='' className="link-btn text-dark">FAQ</Link></Nav.Link>
                             <Nav.Link className='me-4 text-dark'><Link to='/blog' className='link-btn text-dark'>Blog</Link></Nav.Link>
                             <Nav.Link className='me-4 text-dark'>Dark <DarkMode style={{height:'5px'}}></DarkMode> </Nav.Link>
                             {
                                 user?.uid ?
                                     <div className='d-flex nameAndBtn align-items-center'>
-                                        <span className='d-block'>{user?.displayName}</span>
+                                        {/* <span className='d-block'>{user?.displayName}</span> */}
                                         <Button variant="success" className='ms-2 d-lg-block' onClick={handleLogOut}>Log Out</Button>
                                     </div>
                                     :
