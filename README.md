@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-# educal
+# Website Name : educal
 
 # live link : https://learn-with-educal.web.app/
 
