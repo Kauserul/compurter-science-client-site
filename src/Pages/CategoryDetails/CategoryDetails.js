@@ -2,20 +2,24 @@ import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaDownload } from 'react-icons/fa';
+import Pdf from "react-to-pdf";
 
-const CategoryDetails = ({course}) => {
+const CategoryDetails = ({ course }) => {
+    const ref = React.createRef();
     const { img, title, details, id } = course;
     return (
         <Container>
-            <div className='d-flex justify-content-between mb-0 mt-3'>
+            <div className='d-flex justify-content-between mb-3 mt-3'>
                 <div>
                 </div>
-                <div>
-                    <span className='pdf'>Download PDF <FaDownload></FaDownload></span>
+                <div className=''>
+                    <Pdf targetRef={ref} filename="code-example.pdf">
+                        {({ toPdf }) => <button onClick={toPdf}><span className='pdf'>Download PDF <FaDownload></FaDownload></span></button>}
+                    </Pdf>
                 </div>
             </div>
             <Row>
-                <Col lg='6'>
+                <Col lg='6' ref={ref}>
                     <Image style={{ width: '500px', height: '520px' }} src={img}></Image>
                 </Col>
                 <Col lg='6'>
