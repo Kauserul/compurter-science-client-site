@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { FaDownload } from 'react-icons/fa';
 
+
 const CourseDetails = () => {
     const courseDetails = useLoaderData();
     const { img, title, details, id } = courseDetails;
@@ -13,7 +14,9 @@ const CourseDetails = () => {
             <div className='d-flex justify-content-between mb-3 mt-3'>
                 <div>
                 </div>
-                <span className='pdf'>Download PDF <FaDownload></FaDownload></span>
+                <div>
+                    <span className='pdf'>Download PDF <FaDownload></FaDownload></span>
+                </div>
             </div>
             <Row>
                 <Col lg='6'>

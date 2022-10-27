@@ -8,8 +8,7 @@ import PDFfile from './Pages/PDFfile/PDFfile';
 function App() {
   return (
     <div className="container">
-        <RouterProvider router={router}></RouterProvider> 
-        
+        <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
