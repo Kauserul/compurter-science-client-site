@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaDownload } from 'react-icons/fa';
 
 const CategoryDetails = ({course}) => {
     const { img, title, details, id } = course;
@@ -9,7 +10,9 @@ const CategoryDetails = ({course}) => {
             <div className='d-flex justify-content-between mb-0 mt-3'>
                 <div>
                 </div>
-                <Button variant="primary" className=''>Download pdf</Button>
+                <div>
+                    <span className='pdf'>Download PDF <FaDownload></FaDownload></span>
+                </div>
             </div>
             <Row>
                 <Col lg='6'>

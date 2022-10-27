@@ -1,7 +1,4 @@
 
-
-
-
 # Website Name : educal
 
 # live link : https://learn-with-educal.web.app/
