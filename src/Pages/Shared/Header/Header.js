@@ -21,7 +21,7 @@ const Header = () => {
 
 
     return (
-        <Navbar bg="light" variant="light" className='mb-3 header'>
+        <Navbar bg="light" variant="light" className='mb-3'>
             <Container className='d-flex justify-content-between'>
                 <div className='d-flex align-items-center'>
                     <FaPen className='me-0 text-danger'></FaPen>

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import Blog from "../../Pages/Blog/Blog";
 import Categories from "../../Pages/Categories/Categories";
 import CategoryCourse from "../../Pages/CategoryCourse/CategoryCourse";
 import Classes from "../../Pages/Classes/Classes";
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
                 path : '/categoryCourse/:id',
                 element : <CategoryCourse></CategoryCourse>,
                 loader : ({params}) => fetch(`https://compurter-scien-sever-site.vercel.app/category/${params.id}`)
+            },
+            {
+                path : '/blog',
+                element : <Blog></Blog>
             }
         ]
     }
